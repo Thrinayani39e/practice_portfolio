@@ -2,12 +2,9 @@
 
 {% block content %}
 
-{% for person, label in [("ruth", "Ruth"), ("thrinayani", "Thrinayani")] %}
 <div class="exp-person-section">
-    <h2 class="exp-person-header">{{ label }}</h2>
-
     <h3 class="exp-subsection-title">Education</h3>
-    {% for edu in education[person] %}
+    {% for edu in education %}
     <div class="experience-card">
         <div class="experience-header">
             <div>
@@ -20,7 +17,7 @@
     {% endfor %}
 
     <h3 class="exp-subsection-title">Work Experience</h3>
-    {% for exp in experiences[person] %}
+    {% for exp in experiences %}
     <div class="experience-card">
         <div class="experience-header">
             <div class="experience-header-left">
@@ -44,6 +41,5 @@
     </div>
     {% endfor %}
 </div>
-{% endfor %}
 
 {% endblock %}

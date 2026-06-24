@@ -27,15 +27,11 @@
   .hero p.lead{font-size:1.1rem;max-width:680px;margin:14px auto 0;color:#33363c}
 
   /* profiles */
-  .duo{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:20px}
-  @media (max-width:820px){.duo{grid-template-columns:1fr}}
-  .person{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:24px;box-shadow:8px 8px 0 var(--line);position:relative}
-  .person.left{--c:var(--accent)}
-  .person.right{--c:var(--blue)}
+  .person-wrap{display:flex;justify-content:center;margin-top:20px}
+  .person{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:24px;box-shadow:8px 8px 0 var(--line);position:relative;max-width:680px;width:100%;--c:var(--blue)}
   .person .ribbon{position:absolute;top:-14px;left:20px;background:var(--c);color:#fff;border:2px solid var(--line);border-radius:999px;padding:4px 14px;font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase}
   .person-head{display:flex;gap:18px;align-items:center;margin-bottom:14px}
   .avatar{width:96px;height:96px;border-radius:50%;border:3px solid var(--line);object-fit:cover;object-position:center center;background:var(--accent2);box-shadow:4px 4px 0 var(--line);flex-shrink:0;display:block}
-  .avatar--ruth{object-position:72% 30%}
   .avatar--thrinayani{object-position:50% 20%}
   .person-head h2{margin:0;font-size:1.5rem}
   .person-head .sub{color:var(--muted);font-size:.9rem;margin-top:2px}
@@ -97,61 +93,17 @@
 
 <header class="hero">
   <div class="wrap">
-    <h1>Hi, we're Ruth and Thrinayani!</h1>
+    <h1>Hi, I'm Thrinayani!</h1>
   </div>
 </header>
 
 <main class="wrap">
 
-  <!-- profiles -->
+  <!-- profile -->
   <section style="border-top:none;padding-top:10px">
-    <div class="duo">
+    <div class="person-wrap">
 
-      <!-- ruth -->
-      <article class="person left">
-        <div class="person-head">
-          <img class="avatar avatar--ruth" src="/static/img/profiles/ruth.png" alt="Ruth Pérez">
-          <div>
-            <h2>Ruth Pérez</h2>
-            <div class="sub">Queens, NYC</div>
-          </div>
-        </div>
-
-        <p>I'm passionate about the intersection of life sciences and technology especially to help improve healthcare access and outcomes.</p>
-
-        <h3>Education</h3>
-        <ul class="exp">
-          <li>
-            <div class="role">B.A. in Biology &amp; Computer Science</div>
-            <div class="org">Brandeis University · Waltham, MA · Senior</div>
-          </li>
-        </ul>
-
-        <h3>Experience</h3>
-        <ul class="exp">
-          <li>
-            <div class="role">Machine Learning Research Intern</div>
-            <div class="org">MIT FMML</div>
-            <div class="chips"><span class="chip now">Current</span>
-          </li>
-          <li>
-            <div class="role">Software Engineer Intern - Robotics Simulation</div>
-            <div class="org">NVIDIA</div>
-          </li>
-          <li>
-            <div class="role">Research Intern - ICCAN team</div>
-            <div class="org">Memorial Sloan Kettering Cancer Center</div>
-          </li>
-          <li>
-            <div class="role">Teaching Assistant - ENGR 11A: Intro to Design Methodology</div>
-            <div class="org">Brandeis University</div>
-          </li>
-        </ul>
-      </article>
-
-      <!-- thrinayani -->
-      <article class="person right">
-        <div class="ribbon">Thrinayani</div>
+      <article class="person">
         <div class="person-head">
           <img class="avatar avatar--thrinayani" src="/static/img/profiles/Thrinayani.jpeg" alt="Thrinayani Yedhoti">
           <div>
@@ -199,7 +151,7 @@
 
   <!-- map -->
   <section>
-    <div class="section-head"><h2>Places we've been!</h2></div>
+    <div class="section-head"><h2>Places I've been!</h2></div>
     <div id="map" role="region" aria-label="Interactive map of places visited"></div>
   </section>
 
@@ -232,7 +184,7 @@
     },
     {
       name:"Lima, Peru", emoji:"📍", lat:-12.0464, lng:-77.0428,
-      blurb:"Ruth's home country!",
+      blurb:"Beautiful historic coastal city!",
       imgs:[
         "/static/img/travel/lima/DSC_0390.JPG",
         "/static/img/travel/lima/DSC_0391.JPG",
