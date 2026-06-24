@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hobbies-section">
+    <h2 class="hobbies-person-header">Ruth</h2>
+    <div class="hobbies-grid">
+        {% for project in projects.ruth %}
+        <div class="hobby-card">
+            <img src="/static/{{ project.image }}" alt="{{ project.name }}" class="hobby-image" />
+            <div class="hobby-info">
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.description }}</p>
+                {% if project.link %}
+                <a class="project-link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer">View project →</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="hobbies-section">
+    <h2 class="hobbies-person-header">Thrinayani</h2>
+    <div class="hobbies-grid">
+        {% for project in projects.thrinayani %}
+        <div class="hobby-card">
+            <img src="/static/{{ project.image }}" alt="{{ project.name }}" class="hobby-image" />
+            <div class="hobby-info">
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.description }}</p>
+                {% if project.link %}
+                <a class="project-link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer">View project →</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
