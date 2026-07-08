@@ -22,6 +22,8 @@ mydb = MySQLDatabase(
     port=3306
 )
 
+print(mydb)
+
 # --- Task 2: TimelinePost Model ---
 class TimelinePost(Model):
     name = CharField()
