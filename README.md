@@ -78,11 +78,11 @@ EXPERIENCES = {
 
 2. **Create and activate a virtual environment**
    ```bash
-   python -m venv venv
+   python -m venv .venv
    # macOS / Linux
-   source venv/bin/activate
+   source .venv/bin/activate
    # Windows
-   venv\Scripts\activate
+   .venv\Scripts\activate
    ```
 
 3. **Install dependencies**
