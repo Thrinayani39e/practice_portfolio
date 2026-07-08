@@ -1,6 +1,6 @@
 # Production Engineering – Portfolio Site
 
-A two-person portfolio site built with Flask as part of the MLH Fellowship (Ruth Pérez & Thrinayani Yedhoti). Showcases about, experience, hobbies, and a travel map.
+A two-person portfolio site built with Flask as part of the MLH Fellowship (Ruth Pérez & Thrinayani Yedhoti). Showcases about, experience, hobbies, a timeline feed, and a travel map.
 
 ---
 
@@ -26,6 +26,7 @@ pe-portfolio-submission/
 │   │       └── main.css         # Global styles
 │   └── templates/
 │       ├── base.html            # Shared layout (head, navbar, content block)
+│       ├── timeline.html        # Timeline page with post form and feed
 │       └── components/
 │           ├── navbar.html      # Navbar — loops over NAV_LINKS from constants
 │           ├── about.html       # About page — profiles, bios, travel map
@@ -113,6 +114,7 @@ The app will be available at `http://localhost:5000`.
 | `/`           | Redirects to `/about`       |
 | `/about`      | About — profiles & map      |
 | `/experience` | Experience (Ruth & Thrinayani) |
+| `/timeline`   | Timeline posts and form     |
 | `/hobbies`    | Hobbies (Ruth & Thrinayani) |
 | `/projects`   | Projects                    |
 
@@ -127,6 +129,9 @@ Edit the relevant list in `app/constants.py` under the `ruth` or `thrinayani` ke
 1. Add an entry to `NAV_LINKS` and `PAGE_TITLES` in `app/constants.py`.
 2. Create `app/templates/components/<page>.html` extending `base.html`.
 3. Add a route in `app/__init__.py`.
+
+### Timeline page
+The timeline page lives at `/timeline` and uses the `/api/timeline_post` endpoints to create and display posts without a full page reload.
 
 ---
 
