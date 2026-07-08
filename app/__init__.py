@@ -98,6 +98,14 @@ def projects():
         projects=PROJECTS,
     )
 
+@app.route("/timeline")
+def timeline():
+    return render_template(
+        "timeline.html",
+        title=PAGE_TITLES["timeline"],
+        active_page="timeline",
+    )
+
 @app.route("/hobbies")
 def hobbies():
     return render_template(
