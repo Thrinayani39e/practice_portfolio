@@ -2,6 +2,8 @@
 
 A two-person portfolio site built with Flask as part of the MLH Fellowship (Ruth Pérez & Thrinayani Yedhoti). Showcases about, experience, hobbies, a timeline feed, and a travel map.
 
+The app uses MySQL through Peewee for timeline posts. The timeline page at `/timeline` reads and writes to the same database as the `/api/timeline_post` endpoints.
+
 ---
 
 ## Project Structure
@@ -66,6 +68,7 @@ EXPERIENCES = {
 
 - Python 3.8+
 - pip
+- MySQL server
 
 ---
 
@@ -97,6 +100,12 @@ EXPERIENCES = {
    ```
    The default `.env` sets `URL=localhost:5000`. Edit it if needed.
 
+   Make sure the MySQL values in `.env` point to a running database that already exists:
+   - `MYSQL_HOST`
+   - `MYSQL_USER`
+   - `MYSQL_PASSWORD`
+   - `MYSQL_DATABASE`
+
 ---
 
 ## Running Locally
@@ -108,6 +117,8 @@ flask run
 ```
 
 The app will be available at `http://localhost:5000`.
+
+On startup, the Flask app connects to MySQL and creates the `TimelinePost` table if it does not already exist.
 
 | Route         | Page                        |
 |---------------|-----------------------------|
