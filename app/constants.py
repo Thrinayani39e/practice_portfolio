@@ -33,6 +33,17 @@ EDUCATION = [
 
 EXPERIENCES = [
     {
+        "role": "Software Engineer Intern",
+        "company": "Ravenna – Seattle, WA",
+        "dates": "Jul 2026 – Present",
+        "logo": "img/experience/ravenna.png",
+        "current": True,
+        "bullets": [
+            "Build and test OAuth-based integrations with third-party platforms; configure provider auth flows for new integration partners.",
+            "Harden Ravenna's Foundry agentic codegen pipeline for automated TypeScript integration-function generation, debugging and resolving data-extraction failures across partner APIs.",
+        ],
+    },
+    {
         "role": "Software Design Engineer",
         "company": "Schneider Electric – R&D, Industrial Automation",
         "dates": "Feb 2025 – Aug 2025",
