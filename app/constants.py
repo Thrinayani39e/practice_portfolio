@@ -41,8 +41,7 @@ EXPERIENCES = [
         "bullets": [
             "Build and test OAuth-based integrations with third-party platforms; configure provider auth flows for new integration partners.",
             "Harden Ravenna's Foundry agentic codegen pipeline for automated TypeScript integration-function generation, debugging and resolving data-extraction failures across partner APIs.",
-            "Flagged a data-retention gap in unbounded test-run execution logs and owned the fix end-to-end, implementing a 3-day
-TTL sweep as a background job on the team’s BullMQ scheduler",
+          
         ],
     },
     {
@@ -66,6 +65,8 @@ TTL sweep as a background job on the team’s BullMQ scheduler",
         "bullets": [
             "Reduced application load times by 20% by refactoring .NET, WPF, and Angular codebases supporting industrial automation software, with maintained unit test coverage across all modules.",
             "Accelerated database query execution by 40% by designing an ORM-based data architecture using SQLite and SQLAlchemy.",
+            "Engineered a GSE license validation mechanism for the UMAC application in C#/.NET and WPF, cutting licensing validation time by
+30% and improving system scalability.",
         ],
     },
     {
