@@ -29,3 +29,9 @@ jobs:
 
       - name: Deploy site
         run: ssh my-vps "cd ${{ secrets.PROJECT_ROOT }} && sh redeploy-site.sh"
+
+      - name: Print container status
+        run: ssh my-vps "cd ${{ secrets.PROJECT_ROOT }} && docker-compose ps"
+
+      - name: Send Discord success message
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
