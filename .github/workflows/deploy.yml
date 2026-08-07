@@ -30,6 +30,10 @@ jobs:
       - name: Run Tests
         run: ./run_test.sh
 
+      - name: Send Discord failure message
+        if: failure()
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
+
   deploy:
     needs: test
     runs-on: ubuntu-latest
